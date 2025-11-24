@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ogol Benard Omondi | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- 🌙 DARK / LIGHT TOGGLE -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+      <span id="themeIcon">🌙</span>
+    </div>
+
+    <!-- 📌 LEFT CORNER DROPDOWN MENU -->
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">☰ Menu</button>
+      <div class="dropdown-content">
+        <a onclick="scrollToSection('about')">About</a>
+        <a onclick="scrollToSection('education')">Education</a>
+        <a onclick="scrollToSection('experience')">Work Experience</a>
+        <a onclick="scrollToSection('skills')">Skills</a>
+        <a onclick="scrollToSection('projects')">Projects</a>
+        <a onclick="scrollToSection('publications')">Publications</a>
+        <a onclick="scrollToSection('contact')">Contact</a>
+      </div>
+    </div>
+
+    <!-- 🚀 HERO SECTION -->
+    <header class="hero">
+      <h1>Hello, I'm <span class="neon">Benard Omondi Ogol</span></h1>
+      <h2 class="typing"></h2>
+      <div class="hero-content">
+        <button class="btn" onclick="scrollToSection('projects')">
+          View My Projects
+        </button>
+        <img
+          src="assets/images/ben.jpg"
+          alt="Benard Omondi"
+          class="profile-image"
+        />
+      </div>
+    </header>
+
+    <!-- 🧑 ABOUT -->
+    <section id="about" class="section" data-aos="fade-up">
+      <h2 class="title">About Me</h2>
+      <div class="about-content">
+        <p class="about-text">
+          I am a
+          <span class="highlight">results-driven Data Scientist</span> and
+          <span class="highlight">Full-Stack Developer</span> with expertise in
+          machine learning, predictive analytics, and web application
+          development. With a proven track record at
+          <span class="neon">UFATI Kenya</span>, I specialize in transforming
+          complex data into actionable insights that drive business decisions
+          across healthcare, finance, and cybersecurity sectors.
+        </p>
+        <p class="about-text">
+          My <span class="highlight">published research</span> on food price
+          prediction demonstrates my ability to deliver high-impact solutions
+          that address real-world challenges. I combine technical proficiency in
+          <span class="neon">Python, Django, and advanced ML algorithms</span>
+          with strong problem-solving skills to create scalable, data-driven
+          applications that enhance operational efficiency and support strategic
+          decision-making.
+        </p>
+      </div>
+    </section>
+
+    <!-- 🎓 EDUCATION -->
+    <section id="education" class="section" data-aos="fade-up">
+      <h2 class="title">Education</h2>
+      <div class="education-content">
+        <!-- MSc Data Science -->
+        <div class="education-item-with-image">
+          <div class="education-text">
+            <h3 class="institution">
+              <span class="neon">Strathmore University</span>
+            </h3>
+            <p class="degree">
+              Master of Science in
+              <span class="highlight">Data Science and Analytics</span>
+            </p>
+            <p class="description">
+              Advanced coursework in machine learning algorithms, big data
+              analytics, statistical modeling, and AI applications. Specialized
+              in predictive analytics, deep learning frameworks, and business
+              intelligence solutions with extensive research in food price
+              prediction models.
+            </p>
+          </div>
+          <div class="education-image">
+            <img src="assets/images/strath.jpg" alt="Strathmore University" />
+          </div>
+        </div>
+
+        <!-- Business Management Certificate -->
+        <div class="education-item-with-image reverse">
+          <div class="education-image">
+            <img src="assets/images/iiafrica.jpg" alt="iiAfrica" />
+          </div>
+          <div class="education-text">
+            <h3 class="institution"><span class="neon">iiAfrica</span></h3>
+            <p class="degree">
+              Certificate in <span class="highlight">Business Management</span>
+            </p>
+            <p class="description">
+              Comprehensive program covering strategic management, digital
+              marketing, financial analysis, and business analytics. Integrated
+              machine learning applications in business processes, market
+              research methodologies, and data-driven decision making for
+              organizational growth.
+            </p>
+          </div>
+        </div>
+
+        <!-- BSc Mathematics and Computer Science -->
+        <div class="education-item-with-image">
+          <div class="education-text">
+            <h3 class="institution">
+              <span class="neon">Maseno University</span>
+            </h3>
+            <p class="degree">
+              Bachelor of Science in
+              <span class="highlight">Mathematics and Computer Science</span>
+            </p>
+            <p class="grade">
+              <span class="neon">Second Class Honors (Upper Division)</span>
+            </p>
+            <p class="description">
+              Strong foundation in mathematical modeling, algorithms, software
+              development, and computational mathematics. Coursework included
+              discrete mathematics, linear algebra, calculus, programming
+              languages, database systems, and software engineering principles.
+            </p>
+          </div>
+          <div class="education-image">
+            <img src="assets/images/maseno.jpg" alt="Maseno University" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 💼 WORK EXPERIENCE -->
+    <section id="experience" class="section" data-aos="fade-up">
+      <h2 class="title">Work Experience</h2>
+      <div class="experience-content">
+        <!-- Technical Skills -->
+        <div class="technical-skills">
+          <h3 class="skills-title">
+            <span class="neon">Technical Skills</span>
+          </h3>
+          <div class="skills-categories">
+            <div class="skill-category">
+              <h4><span class="highlight">Programming</span></h4>
+              <p>Python (Flask, Django), SQL</p>
+            </div>
+            <div class="skill-category">
+              <h4><span class="highlight">Machine Learning</span></h4>
+              <p>
+                Random Forest, SVM, Time Series, Regression Models, Supervised &
+                Unsupervised ML
+              </p>
+            </div>
+            <div class="skill-category">
+              <h4><span class="highlight">Data Visualization</span></h4>
+              <p>Tableau, Power BI, Looker Studio, Matplotlib, Seaborn</p>
+            </div>
+            <div class="skill-category">
+              <h4><span class="highlight">Databases & Cloud</span></h4>
+              <p>MySQL, MongoDB, PostgreSQL, AWS, Azure, Docker</p>
+            </div>
+            <div class="skill-category">
+              <h4><span class="highlight">Statistical Inference</span></h4>
+              <p>
+                Hypothesis testing, A/B testing, confidence intervals,
+                regression analysis, ANOVA
+              </p>
+            </div>
+            <div class="skill-category">
+              <h4>
+                <span class="highlight">Natural Language Processing</span>
+              </h4>
+              <p>
+                Text preprocessing, sentiment analysis, topic modeling, LLMs
+                (GPT, Claude, Llama)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job Experiences -->
+        <div class="experience-item">
+          <h3 class="job-title">
+            <span class="highlight">Data Scientist</span> —
+            <span class="neon">Xalco Ujuzi Fursa Limited</span>
+          </h3>
+          <p class="job-period">Jul 2024 – Present</p>
+          <p class="job-description">
+            Lead data science initiatives across Home Care, Comfort Care, and
+            Student datasets. Design live dashboards cutting reporting delays by
+            40% and develop ML models for enrollment forecasting.
+          </p>
+          <div class="achievements">
+            <span class="achievement">• ML Model Deployment</span>
+            <span class="achievement">• Cloud Pipelines (+25% efficiency)</span>
+            <span class="achievement">• LLM Integration</span>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <h3 class="job-title">
+            <span class="highlight">Data Analyst</span> —
+            <span class="neon">One Acre Fund</span>
+          </h3>
+          <p class="job-period">Jan 2024 – May 2024</p>
+          <p class="job-description">
+            Performed QC on SAP transactions with 98% accuracy within 48 hours.
+            Developed SOPs for data handling and built live dashboards for
+            warehouse metrics tracking.
+          </p>
+          <div class="achievements">
+            <span class="achievement">• 98% QC Accuracy</span>
+            <span class="achievement">• SOP Development</span>
+            <span class="achievement">• Live Dashboards</span>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <h3 class="job-title">
+            <span class="highlight">IT Intern</span> —
+            <span class="neon">Kenyatta National Hospital</span>
+          </h3>
+          <p class="job-description">
+            Assisted in system upgrades, network troubleshooting, and
+            cybersecurity measures. Enhanced backup operations achieving 100%
+            recovery rate and supported LAN/WAN setup.
+          </p>
+          <div class="achievements">
+            <span class="achievement">• 100% Recovery Rate</span>
+            <span class="achievement">• Network Support</span>
+            <span class="achievement">• Cybersecurity</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🛠 SKILLS -->
+    <section id="skills" class="section" data-aos="fade-up">
+      <h2 class="title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill neon-hover">Django Framework</div>
+        <div class="skill neon-hover">Flask</div>
+        <div class="skill neon-hover">JavaScript</div>
+        <div class="skill neon-hover">HTML & CSS</div>
+        <div class="skill neon-hover">Data Analysis</div>
+        <div class="skill neon-hover">Machine Learning</div>
+      </div>
+    </section>
+
+    <!-- 🖼 PROJECTS -->
+    <section id="projects" class="section" data-aos="fade-up">
+      <h2 class="title">Projects</h2>
+
+      <div class="projects-grid">
+        <!-- PROJECT 1 -->
+        <div class="project-card" data-aos="zoom-in">
+          <div class="overlay">View Project</div>
+          <img src="assets/images/Food.JPG" alt="project" />
+          <h3>Food Price Prediction</h3>
+          <p>
+            A Django dashboard for real-time prediction of food prices in Kenya
+            using stacked machine learning models (XGBoost + Gradient Boosting).
+          </p>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card" data-aos="zoom-in">
+          <div class="overlay">View Project</div>
+          <img src="assets/images/project2.jpg" alt="project" />
+          <h3>Intrusion Detection System</h3>
+          <p>
+            An AI-powered cybersecurity system that classifies network traffic
+            as BENIGN or DDoS attacks. Features integrated firewall protection
+            with real-time email alerts and machine specs reporting to
+            administrators.
+          </p>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card" data-aos="zoom-in">
+          <div class="overlay">View Project</div>
+          <img src="assets/images/transition.JPG" alt="project" />
+          <h3>AI Caregiver Training Platform</h3>
+          <p>
+            A machine learning platform that enhances caregiver training and
+            employability through AI-driven skill assessment, personalized
+            learning paths, and predictive analytics for improved healthcare
+            workforce development in Kenya.
+          </p>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card" data-aos="zoom-in">
+          <div class="overlay">View Project</div>
+          <img src="assets/images/diamond.JPG" alt="project" />
+          <h3>Diamond Price Prediction & Monitoring</h3>
+          <p>
+            An AI-powered dashboard usiing ML Model to monitor, forecast, and
+            analyze diamond prices in Africa, integrating industry insights,
+            volatility metrics, and authenticity tracking for stakeholders.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📚 PUBLICATIONS -->
+    <section id="publications" class="section" data-aos="fade-up">
+      <h2 class="title">Publications</h2>
+      <div class="publications-content">
+        <div class="publication-item">
+          <h3 class="publication-title">
+            <a
+              href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1661989/full"
+              target="_blank"
+              class="publication-link"
+              ><span class="neon">Kenya Food Price Prediction</span></a
+            >
+          </h3>
+          <p class="journal-info">
+            <span class="highlight">Frontiers in Artificial Intelligence</span>
+            • 2025
+          </p>
+          <div class="publication-summary">
+            <p class="summary-point">
+              Addresses food price volatility in Kenya using
+              <span class="highlight">machine learning methods</span> to predict
+              prices and support economic stability.
+            </p>
+            <p class="summary-point">
+              Developed a <span class="highlight">hybrid model</span> combining
+              XGBoost and gradient boosting with World Food Programme data
+              (2006-2024), achieving <span class="neon">R² = 0.9940</span>.
+            </p>
+            <p class="summary-point">
+              Feature importance analysis revealed key predictors:
+              <span class="highlight"
+                >unit quantity, price type, commodity, and currency</span
+              >.
+            </p>
+            <p class="summary-point">
+              Deployed web application provides
+              <span class="highlight">data-driven decision support</span> for
+              policymakers to prevent food insecurity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📩 CONTACT -->
+    <section id="contact" class="section" data-aos="fade-up">
+      <h2 class="title">Contact</h2>
+
+      <p><strong>Phone:</strong> 0742423200</p>
+      <p><strong>Email:</strong> obernard3@gmail.com</p>
+
+      <!-- EMAIL FORM -->
+      <form class="contact-form" id="contact-form">
+        <input type="text" name="from_name" placeholder="Your Name" required />
+        <input
+          type="email"
+          name="from_email"
+          placeholder="Your Email"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Write your message..."
+          required
+        ></textarea>
+        <button type="submit" class="btn">Send Email</button>
+      </form>
+      <div
+        id="status-message"
+        style="margin-top: 15px; text-align: center"
+      ></div>
+    </section>
+
+    <footer>
+      <div class="social-links">
+        <a
+          href="https://github.com/benard3360-star"
+          target="_blank"
+          class="social-link"
+        >
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path
+              fill="currentColor"
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://linkedin.com/in/benard-omondi-ogol"
+          target="_blank"
+          class="social-link"
+        >
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path
+              fill="currentColor"
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://wa.me/254742423200"
+          target="_blank"
+          class="social-link"
+        >
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path
+              fill="currentColor"
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://facebook.com/benard.ogol"
+          target="_blank"
+          class="social-link"
+        >
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path
+              fill="currentColor"
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+            />
+          </svg>
+        </a>
+      </div>
+      <p>© 2025 Benard Omondi Ogol</p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
